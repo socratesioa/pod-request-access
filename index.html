@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="form.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Pod request access landing page</title>
+  </head>
+  <body>
+    <main>
+      <div class="background-container">
+        <img
+          src="./assets/desktop/bg-pattern-dots.svg"
+          alt="Dots background pattern"
+          class="dots-pattern"
+        />
+        <div class="content-wrapper">
+          <img
+            src="./assets/desktop/logo.svg"
+            height="56"
+            width="135"
+            alt="Podcasts everywhere"
+            class="logo"
+          />
+          <div class="promo">
+            <div class="text-container">
+              <h1 class="text-preset-1">
+                Publish your podcasts <span>everywhere.</span>
+              </h1>
+              <p class="text-preset-2">
+                Upload your audio to Pod with a single click. We’ll then
+                distribute your podcast to Spotify, Apple Podcasts, Google
+                Podcasts, Pocket Casts and more!
+              </p>
+            </div>
+            <div class="promo-bottom">
+              <div class="networks-container">
+                <img
+                  src="./assets/desktop/spotify.svg"
+                  alt="Spotify"
+                  class="network-logo"
+                />
+                <img
+                  src="./assets/desktop/apple-podcast.svg"
+                  alt="Apple Podcasts"
+                  class="network-logo"
+                />
+                <img
+                  src="./assets/desktop/google-podcasts.svg"
+                  alt="Google Podcasts"
+                  class="network-logo"
+                />
+                <img
+                  src="./assets/desktop/pocket-casts.svg"
+                  alt="Pocket Podcasts"
+                  class="network-logo"
+                />
+              </div>
+              <div class="form-container">
+                <form id="form" novalidate>
+                  <div>
+                    <label for="email" class="sr-only">Email Address</label>
+                    <input
+                      id="email"
+                      name="email"
+                      type="email"
+                      placeholder="Email Address"
+                      autocomplete="off"
+                    />
+                  </div>
+                  <button type="submit">Request access</button>
+                  <span
+                    aria-live="polite"
+                    id="email-error"
+                    class="error-message"
+                  ></span>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="main.js" async="defer"></script>
+  </body>
+</html>

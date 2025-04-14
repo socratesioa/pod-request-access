@@ -1,0 +1,273 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --green: #54e6af;
+  --blue950: #121725;
+  --blue900: #2c344b;
+  --blue600: #5a668a;
+  --blue300: #c2cbe5;
+  --white: #ffffff;
+  --red: #fb3e3e;
+}
+
+/* Typography - Desktop */
+h1 {
+  color: var(--green);
+}
+
+h1 span {
+  color: var(--white);
+}
+
+p {
+  color: var(--blue300);
+}
+
+.text-preset-1 {
+  font-size: 48px;
+  line-height: 120%;
+  text-transform: uppercase;
+  font-weight: 300;
+  color: var(--green);
+}
+
+.text-preset-2 {
+  font-size: 18px;
+  line-height: 150%;
+  font-weight: 300;
+}
+
+.text-preset-3 {
+  font-size: 14px;
+  line-height: 200%;
+  font-weight: 700;
+}
+
+/* Typography Mobile */
+@media (max-width: 600px) {
+  .text-preset-1 {
+    font-size: 32px;
+    line-height: 120%;
+    text-align: center;
+  }
+
+  .text-preset-2 {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .text-preset-3 {
+    font-size: 14px;
+    line-height: 200%;
+    font-weight: 700;
+  }
+}
+
+body {
+  font-family: "Chivo", sans-serif;
+  background-color: var(--blue950);
+}
+
+.error-message {
+  display: block;
+  color: var(--red);
+  font-size: 12px;
+  font-weight: 700;
+  margin-left: 32px;
+  margin-top: 8px;
+}
+
+.input-error {
+  border: 2px solid red;
+  background-color: var(--blue900);
+}
+
+.content-wrapper {
+  display: grid;
+}
+
+.text-container {
+  display: grid;
+  gap: 24px;
+}
+
+.networks-container {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  align-items: center;
+}
+
+.network-logo {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (min-width: 1120px) {
+  p {
+    max-width: 448px;
+  }
+
+  main {
+    min-height: 100dvh;
+    place-content: center;
+    padding: 153px 0;
+  }
+
+  .background-container {
+    position: relative;
+    max-width: 1440px;
+    height: 654px;
+    margin: 0 auto;
+    padding-left: 160px;
+    background-image: url("./assets/desktop/image-host.jpg");
+    background-repeat: no-repeat;
+    background-position: top right;
+  }
+
+  .dots-pattern {
+    position: absolute;
+    right: 0;
+    bottom: -42px;
+    z-index: 1;
+  }
+
+  .content-wrapper {
+    max-width: 736px;
+  }
+
+  .promo {
+    z-index: 2;
+    background-color: var(--blue950);
+    padding: 88px 64px 0 0;
+    margin-top: 104px;
+  }
+
+  .promo-bottom {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 64px;
+    margin-top: 40px;
+    max-width: 548px;
+  }
+
+  .networks-container {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 1120px) and (min-width: 600px) {
+  p {
+    max-width: 448px;
+  }
+
+  main {
+    min-height: 100dvh;
+    overflow-x: hidden;
+  }
+
+  .form-container {
+    max-width: 448px;
+  }
+
+  .background-container {
+    position: relative;
+    display: grid;
+    width: 100%;
+    background-image: url("./assets/tablet/image-host.jpg");
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    margin-bottom: 156px;
+  }
+
+  .dots-pattern {
+    position: absolute;
+    right: -116px;
+    bottom: -52px;
+    z-index: 1;
+  }
+
+  .content-wrapper {
+    padding: 0;
+    padding-left: 44px;
+    margin-top: 156px;
+  }
+
+  .promo {
+    background-color: var(--blue950);
+    max-width: 562px;
+    margin-top: 104px;
+    padding: 88px 64px 0 0;
+    z-index: 2;
+  }
+
+  .promo-bottom {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 40px;
+    margin-top: 40px;
+    margin-bottom: 0;
+  }
+
+  .networks-container {
+    gap: 40px;
+    margin-bottom: 0;
+  }
+
+  .text-container {
+    display: grid;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .background-container {
+    min-height: 100dvh;
+    background-image: linear-gradient(
+        rgba(18, 23, 37, 0.9),
+        rgba(18, 23, 37, 0.9)
+      ),
+      url("./assets/mobile/image-host.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    place-content: center;
+  }
+
+  .content-wrapper {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 36px;
+    justify-items: center;
+  }
+
+  .error-message {
+    display: block;
+    color: var(--red);
+    font-size: 12px;
+    font-weight: 700;
+    text-align: center;
+    margin-left: 0;
+    margin-top: 8px;
+  }
+
+  .text-container {
+    gap: 16px;
+  }
+
+  .networks-container {
+    gap: 17.5px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  .dots-pattern {
+    display: none;
+  }
+}
